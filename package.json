@@ -2,8 +2,11 @@
   "name": "mini-jest",
   "version": "1.0.0",
   "description": "Jest 的最小实现",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
+    "build": "swc ./src -d dist",
+    "build:watch": "swc src -d dist -w",
+    "dev": "node dist/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -16,5 +19,13 @@
   "bugs": {
     "url": "https://github.com/haixiangyan/mini-jest/issues"
   },
-  "homepage": "https://github.com/haixiangyan/mini-jest#readme"
+  "homepage": "https://github.com/haixiangyan/mini-jest#readme",
+  "devDependencies": {
+    "@swc/cli": "^0.1.57",
+    "@swc/core": "^1.2.162",
+    "chokidar": "^3.5.3"
+  },
+  "dependencies": {
+    "glob": "^7.2.0"
+  }
 }
